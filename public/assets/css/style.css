@@ -1,0 +1,51 @@
+.agenda-width {
+    background-color: rgb(242, 242, 242);
+    height: max-content;
+    flex-direction: column !important;
+    padding: 5vh;
+    border-radius: 10px;
+}
+
+.agenda-direction {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.card-width {
+    width: 40vh !important;
+    margin: 1vh;
+}
+
+.weekend-taks{
+    background-color: rgb(242, 242, 242);
+    height: 50vh;
+    overflow-x: scroll;
+    border-radius: 10px;
+}
+
+.day-conteiner {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 2vh;
+    height: max-content;
+}
+
+.activite-width {
+    background-color: rgb(242, 242, 242);
+    width: 100vh;
+    height: max-content;
+    flex-direction: column !important;
+    padding: 5vh;
+    border-radius: 10px;
+}
+
+.activites-list a {
+    text-decoration: none;
+    color: gray;
+}
+
+.activites-list  {
+
+}
