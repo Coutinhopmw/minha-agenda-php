@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('taks', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('description');
@@ -33,6 +33,6 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->dropForeignIdFor(User::class);
         });
-        Schema::dropIfExists('taks');
+        Schema::dropIfExists('posts');
     }
 };
