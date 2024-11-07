@@ -14,11 +14,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('description');
-            $table->foreignIdFor(User::class)->references('id')->on('users');
+            // $table->foreignId(User::class)->references('id')->on('users');
+            $table->string('title')->nullable(false);
+            $table->string('color')->default('#FFFFFF');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,9 +31,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('categories', function(Blueprint $table){
             $table->dropForeignIdFor(User::class);
         });
-        Schema::dropIfExists('posts');
+
+        Schema::dropIfExists('categories');
     }
 };
